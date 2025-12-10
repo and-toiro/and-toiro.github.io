@@ -502,6 +502,13 @@ footer {
   background-position: center center !important;
 }
 
+/* 背景ロゴを画面いっぱいに表示するための高さ指定 */
+.hero {
+  min-height: 100vh !important;  /* 画面の高さ = 100% */
+  display: flex;
+  align-items: center;           /* テキストを縦方向の中央に寄せる */
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
