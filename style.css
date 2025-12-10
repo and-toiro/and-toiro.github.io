@@ -477,26 +477,6 @@ footer {
   padding-bottom: 120px; /* 画面下側との余白 */
 }
 
-/* 背景ロゴの上に薄いホワイトオーバーレイを追加 */
-.hero {
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.35); /* 透明度35%の白 */
-  z-index: 1;
-}
-
-/* テキストをオーバーレイの上に表示する */
-.hero-inner,
-.hero-main {
-  position: relative;
-  z-index: 2;
-}
-
 /* 背景ロゴの表示位置：画像の中央を基準にする */
 .hero {
   background-position: center center !important;
