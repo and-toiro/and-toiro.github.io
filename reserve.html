@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ご予約 | 美容室 &toiro（アントワロ）</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="美容室 &toiro（アントワロ）のご予約ページです。Web予約フォーム（Airリザーブ）より24時間ご予約を受け付けております。"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================= ヘッダー ================= -->
+    <header>
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <div>
+            <div class="logo-text-main">&toiro</div>
+            <div class="logo-text-sub">private hair salon</div>
+          </div>
+        </a>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="concept.html">コンセプト</a></li>
+            <li><a href="menu.html">メニュー</a></li>
+            <li><a href="gallery.html">ギャラリー</a></li>
+            <li><a href="access.html">アクセス</a></li>
+            <li><a href="reserve.html" class="active">ご予約</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================= ご予約 ================= -->
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title">RESERVE</h1>
+          <p class="section-subtitle">
+            Web予約フォーム（Airリザーブ）より、24時間ご予約を受け付けています。
+          </p>
+
+          <div class="reserve-note">
+            <p>
+              カットのみのメニューから、カラー・パーマとのセットメニューまで、
+              こちらのWeb予約フォームからご希望のメニュー・日時をお選びいただけます。
+            </p>
+            <p>
+              直前のご予約や、お急ぎのご連絡の際は、お電話にてお問い合わせください。<br />
+              ご希望のお時間が埋まっている場合でも、調整可能な場合がございます。
+            </p>
+          </div>
+
+          <!-- Airリザーブ埋め込み枠 -->
+          <div class="reserve-embed">
+            <!-- ★ 本番では、この div を Airリザーブの埋め込み用 iframe に差し替え -->
+            <div
+              style="
+                width: 100%;
+                height: 480px;
+                background-color: #e5e7eb;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 14px;
+                color: #555;
+                padding: 16px;
+              "
+            >
+              こちらに Airリザーブの予約フォームを埋め込み予定です。<br />
+              本番運用時には、Airリザーブ管理画面から発行される<br />
+              「埋め込み用HTMLコード（iframe）」を貼り付けてください。
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= フッター ================= -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-copy">
+          &copy; 2025 美容室 &toiro（アントワロ） All Rights Reserved.
+        </div>
+        <div class="footer-links">
+          <a href="access.html">アクセス</a>
+          <a href="reserve.html">ご予約</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
