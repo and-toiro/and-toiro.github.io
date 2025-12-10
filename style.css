@@ -432,6 +432,11 @@ footer {
   font-size: 12px;
 }
 
+/* TOPページ（hero セクションのすぐ下にあるフッター）だけ余白をなくす */
+.hero + footer {
+  margin-top: 0;
+}
+
 .footer-inner {
   max-width: var(--max-width);
   margin: 0 auto;
