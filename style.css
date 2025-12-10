@@ -455,6 +455,15 @@ footer {
   color: #e5e7eb;
 }
 
+/* ヒーロー背景（画面いっぱいのロゴ画像） */
+.hero {
+  background-image: url("IMG_6499.JPG");
+  background-size: cover;       /* 画面いっぱいに拡大 */
+  background-position: center;  /* 中央に配置 */
+  background-repeat: no-repeat; /* 繰り返さない */
+  min-height: 600px;            /* 必要であれば高さ調整（後で変更可） */
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
