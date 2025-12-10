@@ -464,6 +464,13 @@ footer {
   min-height: 600px;            /* 必要であれば高さ調整（後で変更可） */
 }
 
+/* 背景を全幅で見せるために hero 内の container の最大幅を解除 */
+.hero .container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
