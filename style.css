@@ -1,0 +1,460 @@
+/* =========================
+   ベース設定
+   ========================= */
+:root {
+  --main-color: #e07a5f;    /* メインカラー（落ち着いたオレンジ系） */
+  --accent-color: #f2cc8f;  /* アクセントカラー（やわらかいベージュ） */
+  --bg-light: #fff7f2;      /* セクションの薄い背景 */
+  --text-main: #333333;
+  --text-muted: #777777;
+  --border-light: #e5e7eb;
+  --max-width: 1040px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  color: var(--text-main);
+  background-color: #ffffff;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+/* =========================
+   共通レイアウト
+   ========================= */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* セクション共通 */
+.section {
+  padding: 72px 0;
+}
+
+.section--bg-light {
+  background-color: var(--bg-light);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+/* =========================
+   ヘッダー / ナビゲーション
+   ========================= */
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+/* ロゴ（画像でもテキストでも使える想定） */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+.logo-text-main {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.logo-text-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ナビメニュー */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* ホバー & 現在ページ */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: width 0.2s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a.active {
+  color: var(--main-color);
+}
+
+nav a.active::after {
+  width: 100%;
+}
+
+/* =========================
+   TOPページ想定：ヒーロー
+   ========================= */
+
+.hero {
+  background: linear-gradient(
+    120deg,
+    rgba(224, 122, 95, 0.06),
+    rgba(242, 204, 143, 0.2)
+  );
+  padding: 80px 0 88px;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-main {
+  flex: 1.2;
+}
+
+.hero-tagline {
+  font-size: 13px;
+  color: var(--main-color);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-size: 32px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.hero-title span {
+  color: var(--main-color);
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* SNSアイコンリンク（Instagram / LINE等） */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.social-link-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-light);
+  background-color: #ffffff;
+  font-size: 18px;
+}
+
+/* 右側イメージエリア（イメージ写真など） */
+.hero-visual {
+  flex: 1;
+  text-align: right;
+}
+
+/* =========================
+   ボタン
+   ========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--main-color);
+  color: #ffffff;
+  border-color: var(--main-color);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.btn-outline:hover {
+  background-color: rgba(224, 122, 95, 0.06);
+}
+
+/* =========================
+   コンテンツ共通ブロック
+   ========================= */
+
+/* 2カラム（コンセプト・アクセスなどで使用想定） */
+.two-column {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.two-column-main {
+  flex: 1.4;
+}
+
+.two-column-sub {
+  flex: 1;
+}
+
+/* 段落 */
+.lead-text {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.text-muted {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* =========================
+   メニュー・料金表
+   ========================= */
+
+.menu-list {
+  max-width: 720px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border-light);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.menu-item-name {
+  font-size: 15px;
+}
+
+.menu-item-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.menu-item-price {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* =========================
+   ギャラリー
+   ========================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #f3f4f6;
+}
+
+/* =========================
+   アクセス
+   ========================= */
+
+.access-info {
+  max-width: 640px;
+  margin: 0 auto 24px;
+}
+
+.access-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.access-table th,
+.access-table td {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--border-light);
+  text-align: left;
+}
+
+.access-table th {
+  width: 30%;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* 地図エリア（Google Map 埋め込み用） */
+.map-wrap {
+  margin-top: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+/* =========================
+   予約ページ（Airリザーブ埋め込み想定）
+   ========================= */
+
+.reserve-note {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.reserve-embed {
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+/* =========================
+   フッター
+   ========================= */
+
+footer {
+  margin-top: 80px;
+  padding: 24px 0 32px;
+  background-color: #1f2933;
+  color: #e5e7eb;
+  font-size: 12px;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-copy {
+  font-size: 12px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: #e5e7eb;
+}
+
+/* =========================
+   ※ スマホ用メディアクエリは後で追加
+   ========================= */
