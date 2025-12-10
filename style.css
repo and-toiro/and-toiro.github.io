@@ -458,10 +458,10 @@ footer {
 /* ヒーロー背景（画面いっぱいのロゴ画像） */
 .hero {
   background-image: url("IMG_6499.JPG");
-  background-size: contain;
-  background-position: center;  /* 中央に配置 */
-  background-repeat: no-repeat; /* 繰り返さない */
-  min-height: 600px;            /* 必要であれば高さ調整（後で変更可） */
+  background-size: contain;          /* ロゴ全体が必ず収まる */
+  background-position: center center;/* 画像の中央を基準に配置 */
+  background-repeat: no-repeat;      /* 繰り返さない */
+  background-color: #faf8f2;         /* ロゴまわりの余白を馴染む色で塗る */
 }
 
 /* 背景を全幅で見せるために hero 内の container の最大幅を解除 */
