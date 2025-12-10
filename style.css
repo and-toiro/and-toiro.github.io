@@ -518,6 +518,26 @@ footer {
   padding-right: 40px;
 }
 
+/* 背景ロゴの上に薄いグレーのオーバーレイをかけてテキストを読みやすくする */
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);  /* 白 35%（透明度） */
+  z-index: 1;
+}
+
+/* テキストをオーバーレイより前面に出す */
+.hero-inner,
+.hero-main {
+  position: relative;
+  z-index: 2;
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
