@@ -504,9 +504,15 @@ footer {
 
 /* 背景ロゴを画面いっぱいに表示するための高さ指定 */
 .hero {
-  min-height: 100vh !important;  /* 画面の高さ = 100% */
+  min-height: 100vh !important;
   display: flex;
-  align-items: center;           /* テキストを縦方向の中央に寄せる */
+  align-items: center;
+
+  /* ← ここに追加 */
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: #faf8f2 !important;
 }
 
 /* ヒーロー内のテキスト配置を左寄せに固定 */
