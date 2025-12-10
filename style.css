@@ -543,6 +543,11 @@ footer {
   image-rendering: auto !important;
 }
 
+/* 背景ロゴの表示位置をピクセル単位で調整（上下を微調整） */
+.hero {
+  background-position: center 20%;
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
