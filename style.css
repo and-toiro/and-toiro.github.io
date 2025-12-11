@@ -572,30 +572,9 @@ footer {
   margin-top: 0; /* 本来の上余白をキャンセル */
 }
 
-/* SNSアイコン画像を48pxに固定 */
-.social-link-circle img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain; /* 画像の縦横比を維持 */
-}
-
 /* ボタンとアイコンの縦位置をきれいにそろえる */
 .hero-actions {
   align-items: center !important;
-}
-
-/* SNSアイコン画像を実寸表示（ぼやけ防止） */
-.social-link-circle img {
-  width: 48px;
-  height: 48px;
-  display: block;
-}
-
-/* SNSアイコン画像を実寸でくっきり表示（48×48px固定） */
-.social-link-circle img {
-  width: 48px;
-  height: 48px;
-  display: block;
 }
 
 /* =========================
