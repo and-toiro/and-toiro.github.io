@@ -196,7 +196,7 @@ nav a.active::after {
   font-size: 13px;
   color: var(--main-color);
   letter-spacing: 0.2em;
-  text-transform: uppercase;
+  text-transform: none;
   margin-bottom: 12px;
 }
 
