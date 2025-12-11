@@ -590,6 +590,17 @@ footer {
   display: block;
 }
 
+.hero-actions {
+  display: flex;
+  align-items: center; /* ボタンとアイコンの縦位置をそろえる */
+}
+
+.hero-actions .social-links {
+  display: flex;
+  align-items: center; /* アイコン同士の縦位置もそろえる */
+  gap: 16px;
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
