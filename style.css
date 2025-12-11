@@ -617,6 +617,12 @@ footer {
   display: block;
 }
 
+/* Instagram だけ少し大きくして LINE と視覚サイズを揃える */
+.hero-actions a.social-link-circle img[src*="icon-instagram"] {
+  width: 90px;   /* お好みで 88〜92px くらいに微調整可 */
+  height: 90px;
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
