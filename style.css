@@ -231,16 +231,16 @@ nav a.active::after {
 }
 
 .social-link-circle {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border-light);
-  background-color: #ffffff;
-  font-size: 18px;
+  border: none; /* 余計な線が出る場合は消す */
+  background-color: transparent; /* 背景も透明に */
 }
+
 
 /* 右側イメージエリア（イメージ写真など） */
 .hero-visual {
