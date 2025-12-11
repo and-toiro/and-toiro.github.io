@@ -606,6 +606,11 @@ footer {
   height: 90px;
 }
 
+/* Instagram と LINE の見た目の間隔を少しだけ詰める */
+.hero-actions .social-links a.social-link-circle:first-child {
+  margin-right: -12px;  /* -8〜-16 の範囲でお好みで調整可 */
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
