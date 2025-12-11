@@ -219,7 +219,7 @@ nav a.active::after {
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 28px; /* ボタンとアイコンの距離を少し広げる */
 }
 
 /* SNSアイコンリンク（Instagram / LINE等） */
