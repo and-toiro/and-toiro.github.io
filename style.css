@@ -612,6 +612,11 @@ footer {
   gap: 20px;           /* アイコン間の余白（調整可） */
 }
 
+.hero-actions .social-links img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
