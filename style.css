@@ -572,6 +572,13 @@ footer {
   margin-top: 0; /* 本来の上余白をキャンセル */
 }
 
+/* SNSアイコン画像を48pxに固定 */
+.social-link-circle img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain; /* 画像の縦横比を維持 */
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
