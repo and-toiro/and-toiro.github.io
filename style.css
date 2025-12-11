@@ -232,16 +232,15 @@ nav a.active::after {
 
 /* SNSアイコン（Instagram / LINE） */
 .social-link-circle {
-  width: 48px;     /* ← アイコン実寸に合わせる */
-  height: 48px;    /* ← アイコン実寸に合わせる */
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: transparent; /* ← 透明のPNGに合わせる */
-  border: none;            /* ← 枠線を消す */
+  background: transparent;
+  border: none;
   padding: 0;
+  width: auto;
+  height: auto;
 }
-
 
 /* 右側イメージエリア（イメージ写真など） */
 .hero-visual {
