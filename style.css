@@ -592,6 +592,13 @@ footer {
   display: block;
 }
 
+/* SNSアイコン画像を実寸でくっきり表示（48×48px固定） */
+.social-link-circle img {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
