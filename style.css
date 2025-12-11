@@ -230,15 +230,16 @@ nav a.active::after {
   margin-top: 8px;
 }
 
+/* SNSアイコン（Instagram / LINE） */
 .social-link-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 999px;
+  width: 48px;     /* ← アイコン実寸に合わせる */
+  height: 48px;    /* ← アイコン実寸に合わせる */
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none; /* 余計な線が出る場合は消す */
-  background-color: transparent; /* 背景も透明に */
+  background: transparent; /* ← 透明のPNGに合わせる */
+  border: none;            /* ← 枠線を消す */
+  padding: 0;
 }
 
 
@@ -582,6 +583,13 @@ footer {
 /* ボタンとアイコンの縦位置をきれいにそろえる */
 .hero-actions {
   align-items: center !important;
+}
+
+/* SNSアイコン画像を実寸表示（ぼやけ防止） */
+.social-link-circle img {
+  width: 48px;
+  height: 48px;
+  display: block;
 }
 
 /* =========================
