@@ -242,6 +242,14 @@ nav a.active::after {
   height: auto;
 }
 
+/* SNSアイコン画像（48×48pxでくっきり表示） */
+.social-link-circle img {
+  width: 48px;
+  height: 48px;
+  display: block;
+  object-fit: contain;
+}
+
 /* 右側イメージエリア（イメージ写真など） */
 .hero-visual {
   flex: 1;
