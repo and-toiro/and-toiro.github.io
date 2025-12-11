@@ -503,9 +503,9 @@ footer {
 /* ヒーロー内のテキスト配置を左寄せに固定 */
 .hero-inner {
   width: 100%;
-  max-width: 1200px;  /* テキストが広がりすぎないように枠を制限 */
+  max-width: 1200px;
   margin: 0 auto;
-  padding-left: 40px; /* 画面左との距離を確保（後で微調整可能） */
+  padding-left: 80px;  /* ← 40px から 80px に変更 */
   padding-right: 40px;
 }
 
