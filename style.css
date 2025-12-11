@@ -559,6 +559,19 @@ footer {
   margin-left: 40px;
 }
 
+/* ご予約ボタンの右にIG/LINEアイコンを自然に並べる */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* ボタンとの距離を調整（お好みで微調整可能） */
+}
+
+.hero-actions .social-links {
+  display: flex;
+  gap: 12px; /* IGとLINEの間の距離 */
+  margin-top: 0; /* 本来の上余白をキャンセル */
+}
+
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
