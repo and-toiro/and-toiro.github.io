@@ -586,7 +586,7 @@ footer {
 .hero-actions .social-links {
   display: flex;
   align-items: center; /* アイコン同士も縦位置を揃える */
-  gap: 10px;           /* アイコン間の余白（調整可） */
+  gap: 0px;           /* アイコン間の余白（調整可） */
 }
 
 .hero-actions .social-links img {
