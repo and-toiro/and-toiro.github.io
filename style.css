@@ -30,6 +30,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* TOPページだけ body 背景を固定 */
+.page-top {
+  background-color: #faf8f2;
+}
+
 img {
   max-width: 100%;
   height: auto;
