@@ -369,6 +369,41 @@ nav a.active::after {
 }
 
 /* =========================
+   メニュー：箱（カテゴリ）構成
+   ========================= */
+
+/* 箱全体 */
+.menu-sections {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* 各カテゴリ箱 */
+.menu-box {
+  margin-bottom: 56px; /* 箱同士の間隔 */
+}
+
+/* 箱タイトル（cut / color など） */
+.menu-box-title {
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-light);
+  text-transform: lowercase;
+}
+
+/* 箱内の menu-list は上線を消す */
+.menu-box .menu-list {
+  border-top: none;
+}
+
+/* 箱内の最後の行だけ下線を消す */
+.menu-box .menu-item:last-child {
+  border-bottom: none;
+}
+
+/* =========================
    ギャラリー
    ========================= */
 
