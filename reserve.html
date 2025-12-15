@@ -52,27 +52,14 @@
           </div>
 
           <!-- Airリザーブ埋め込み枠 -->
-          <div class="reserve-embed">
-            <!-- ★ 本番では、この div を Airリザーブの埋め込み用 iframe に差し替え -->
-            <div
-              style="
-                width: 100%;
-                height: 480px;
-                background-color: #e5e7eb;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                font-size: 14px;
-                color: #555;
-                padding: 16px;
-              "
-            >
-              こちらに Airリザーブの予約フォームを埋め込み予定です。<br />
-              本番運用時には、Airリザーブ管理画面から発行される<br />
-              「埋め込み用HTMLコード（iframe）」を貼り付けてください。
-            </div>
-          </div>
+        <div class="reserve-embed">
+  <iframe
+    src="https://airrsv.net/and-toiro/calendar"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Airリザーブ 予約フォーム"
+  ></iframe>
+</div>
         </div>
       </section>
     </main>
