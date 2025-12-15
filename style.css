@@ -323,6 +323,13 @@ nav a.active::after {
   font-size: 13px;
 }
 
+/* コンセプト本文：左揃えのまま中央寄せ */
+.concept-content {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 /* =========================
    メニュー・料金表
    ========================= */
