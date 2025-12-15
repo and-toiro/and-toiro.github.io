@@ -330,6 +330,11 @@ nav a.active::after {
   text-align: left;
 }
 
+/* コンセプト：署名だけ右寄せ */
+.concept-content p:last-child {
+  text-align: right;
+}
+
 /* =========================
    メニュー・料金表
    ========================= */
