@@ -701,3 +701,25 @@ footer {
 /* =========================
    ※ スマホ用メディアクエリは後で追加
    ========================= */
+
+/* =========================
+   ハンバーガー（共通）
+   ========================= */
+
+.nav-toggle {
+  display: none;          /* ← PCでは非表示（スマホで表示させる） */
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--text-main);
+  margin: 6px 0;
+  border-radius: 2px;
+}
