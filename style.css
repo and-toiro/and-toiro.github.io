@@ -413,6 +413,22 @@ nav a.active::after {
 }
 
 /* =========================
+   メニュー：視線誘導の微調整
+   ========================= */
+
+/* よく使われるカテゴリを少し強調 */
+.menu-box:first-of-type .menu-box-title,
+.menu-box:nth-of-type(2) .menu-box-title {
+  font-size: 20px;
+}
+
+/* other は控えめに */
+.menu-box:last-of-type .menu-box-title {
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* =========================
    ギャラリー
    ========================= */
 
