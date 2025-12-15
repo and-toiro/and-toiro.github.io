@@ -84,5 +84,18 @@
         </div>
       </div>
     </footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.getElementById("site-nav");
+
+    toggle.addEventListener("click", function () {
+      const isOpen = nav.style.display === "block";
+
+      nav.style.display = isOpen ? "none" : "block";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+    });
+  });
+</script>
   </body>
 </html>
