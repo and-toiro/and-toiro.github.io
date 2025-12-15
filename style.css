@@ -368,6 +368,15 @@ nav a.active::after {
   font-weight: 600;
 }
 
+/* 価格なしの補足行を説明文として整える */
+.menu-item-price:empty {
+  display: none;
+}
+
+.menu-item-note {
+  line-height: 1.6;
+}
+
 /* =========================
    メニュー：箱（カテゴリ）構成
    ========================= */
