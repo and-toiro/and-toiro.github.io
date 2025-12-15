@@ -499,6 +499,14 @@ nav a.active::after {
   border: 1px solid #e5e7eb;
 }
 
+/* Airリザーブ iframe を枠内で全幅表示 */
+.reserve-embed iframe {
+  width: 100%;
+  height: 820px;   /* まずはこの高さ。足りなければ後で増やす */
+  border: 0;
+  display: block;
+}
+
 /* =========================
    フッター
    ========================= */
