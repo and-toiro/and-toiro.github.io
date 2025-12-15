@@ -723,3 +723,31 @@ footer {
   margin: 6px 0;
   border-radius: 2px;
 }
+
+/* =========================
+   スマホ用ナビ切り替え
+   ========================= */
+@media screen and (max-width: 640px) {
+
+  /* 横並びナビを隠す */
+  .site-nav {
+    display: none;
+  }
+
+  /* ハンバーガーを表示 */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* 右上に配置 */
+  .header-inner {
+    position: relative;
+  }
+
+  .nav-toggle {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+  }
+}
