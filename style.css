@@ -814,3 +814,8 @@ footer {
   }
 }
 
+@media screen and (max-width: 640px) {
+  .logo {
+    padding-right: 56px; /* ハンバーガー分の逃げ */
+  }
+}
