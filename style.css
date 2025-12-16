@@ -923,6 +923,16 @@ footer {
   .br-sp {
     display: inline;
   }
+
+   /* =========================
+   CONCEPT：スマホだけサブタイトルを左揃え
+   ========================= */
+@media screen and (max-width: 640px) {
+  .page-concept .section-subtitle {
+    text-align: left;
+  }
+}
+
   .br-pc {
     display: none;
   }
