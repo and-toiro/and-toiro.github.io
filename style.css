@@ -891,6 +891,18 @@ footer {
   }
 
   /* 白オーバーレイを少し強めて色味を抑える */
+
+   /* =========================
+   スマホ：ヒーロー見出しを小さくして改行を収める
+   ========================= */
+@media screen and (max-width: 640px) {
+  .hero-title {
+    font-size: 28px;   /* ← まずは32→28 */
+    line-height: 1.35; /* 行間を少し詰める */
+    letter-spacing: 0.02em;
+  }
+}
+
   .hero::before {
     background: rgba(255, 255, 255, 0.55);
   }
