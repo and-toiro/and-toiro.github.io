@@ -954,3 +954,142 @@ footer {
     margin-bottom: 24px;
   }
 }
+
+/* =========================
+   SP統合（max-width: 640px）
+   ※スマホ用はここに集約
+   ========================= */
+@media screen and (max-width: 640px) {
+
+  /* ===== ナビ（スマホ） ===== */
+  .site-nav {
+    display: none; /* 初期は閉じる */
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+  }
+
+  .header-inner {
+    position: relative;
+  }
+
+  .logo {
+    padding-right: 56px; /* ハンバーガー分の逃げ */
+  }
+
+  /* 開いたメニューをヘッダー直下にパネル表示 */
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 16px;
+    left: 16px;
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    padding: 8px 0;
+    z-index: 9999;
+  }
+
+  .site-nav ul {
+    display: block;
+  }
+
+  .site-nav li + li {
+    border-top: 1px solid var(--border-light);
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+
+  .site-nav a::after {
+    display: none; /* スマホは下線アニメ不要 */
+  }
+
+  /* ===== ヒーロー（スマホ） ===== */
+  .hero {
+    background-image: none !important; /* 初期表示はロゴ背景を消す */
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* ロゴを疑似要素で用意（初期は透明） */
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("IMG_6499.JPG");
+    background-size: 85%;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* スクロール後表示（JSで .show-logo を付ける前提） */
+  .hero.show-logo::after {
+    opacity: 0.3; /* ロゴを淡く */
+  }
+
+  /* 白オーバーレイ（ロゴより上・テキストより下） */
+  .hero::before {
+    background: rgba(255, 255, 255, 0.55);
+    z-index: 1;
+  }
+
+  .hero-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero-title {
+    font-size: 27px;
+    line-height: 1.32;
+    letter-spacing: 0.02em;
+  }
+
+  /* ===== 改行制御（PC/SP） ===== */
+  .br-sp {
+    display: inline;
+  }
+  .br-pc {
+    display: none;
+  }
+
+  /* ===== concept / gallery / reserve の赤枠文章 =====
+     「文章は左揃え」「ブロックは中央」
+  */
+  .page-concept .section-subtitle,
+  .page-gallery .section-subtitle,
+  .page-reserve .section-subtitle,
+  .page-reserve .reserve-note {
+    text-align: left;
+    max-width: 720px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-concept .section-subtitle,
+  .page-gallery .section-subtitle,
+  .page-reserve .section-subtitle {
+    margin-bottom: 40px;
+  }
+
+  .page-reserve .reserve-note {
+    margin-bottom: 24px;
+  }
+}
