@@ -847,3 +847,10 @@ footer {
     margin-bottom: 24px;
   }
 }
+
+/* スマホ：メニュー開いた状態 */
+@media screen and (max-width: 640px) {
+  .site-nav.is-open {
+    display: block;
+  }
+}
