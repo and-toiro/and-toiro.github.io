@@ -907,3 +907,23 @@ footer {
     background: rgba(255, 255, 255, 0.55);
   }
 }
+
+/* =========================
+   改行制御（PC / SP）
+   ========================= */
+.br-sp {
+  display: none;
+}
+
+.br-pc {
+  display: inline;
+}
+
+@media screen and (max-width: 640px) {
+  .br-sp {
+    display: inline;
+  }
+  .br-pc {
+    display: none;
+  }
+}
