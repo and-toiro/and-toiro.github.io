@@ -930,14 +930,27 @@ footer {
    対象：concept / gallery / reserve
    ========================= */
 @media screen and (max-width: 640px) {
+  /* 赤枠の文章：左揃えのまま「ブロックだけ中央」に統一 */
   .page-concept .section-subtitle,
   .page-gallery .section-subtitle,
   .page-reserve .section-subtitle,
   .page-reserve .reserve-note {
-    text-align: left !important;
+    text-align: left;
+    max-width: 720px;   /* .concept-content / .reserve-embed と揃える */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    /* ブロック位置は中央のまま（左端に張り付かない） */
-    max-width: 26em !important;
-    margin: 0 auto 40px !important;
+  /* subtitle の下余白は subtitle 側だけで統一（reserve-note は別管理） */
+  .page-concept .section-subtitle,
+  .page-gallery .section-subtitle,
+  .page-reserve .section-subtitle {
+    margin-bottom: 40px;
+  }
+
+  /* reserve-note は本文なので余白を少しだけ詰める（必要なら 16〜32で調整） */
+  .page-reserve .reserve-note {
+    margin-bottom: 24px;
   }
 }
