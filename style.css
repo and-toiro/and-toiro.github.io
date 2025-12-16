@@ -862,3 +862,20 @@ footer {
     z-index: 2;
   }
 }
+
+/* =========================
+   スマホ：ロゴ表示をやさしく調整（最終仕上げ）
+   ========================= */
+@media screen and (max-width: 640px) {
+
+  /* ロゴを少しだけ小さく・下寄せ */
+  .hero::after {
+    background-size: 85%;     /* 主張を抑える */
+    background-position: center 45%;
+  }
+
+  /* ロゴが出た後も文字を最優先に */
+  .hero.show-logo::after {
+    opacity: 0.65;            /* 完全表示しないのがポイント */
+  }
+}
