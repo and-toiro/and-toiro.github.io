@@ -897,8 +897,8 @@ footer {
    ========================= */
 @media screen and (max-width: 640px) {
   .hero-title {
-    font-size: 28px;   /* ← まずは32→28 */
-    line-height: 1.35; /* 行間を少し詰める */
+    font-size: 27px;   /* ← 1pxだけ下げる */
+    line-height: 1.32; /* ← 行間もわずかに */
     letter-spacing: 0.02em;
   }
 }
