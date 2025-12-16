@@ -935,7 +935,8 @@ footer {
 @media screen and (max-width: 640px) {
   .page-concept .section-subtitle,
   .page-gallery .section-subtitle,
-  .page-reserve .section-subtitle {
+  .page-reserve .section-subtitle,
+  .page-reserve .reserve-note {
     text-align: left;
 
     /* ブロック自体は中央に置く（fit-content を使わない） */
