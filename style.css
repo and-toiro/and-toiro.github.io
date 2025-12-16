@@ -937,11 +937,10 @@ footer {
   .page-gallery .section-subtitle,
   .page-reserve .section-subtitle,
   .page-reserve .reserve-note {
-    text-align: left;
+    text-align: left !important;
 
-    /* ブロック自体は中央に置く（fit-content を使わない） */
-    max-width: 26em;          /* ← 見た目の“位置”を中央に保つための幅上限 */
-    margin: 0 auto 40px;      /* ← 中央寄せ＋下余白（元の40pxを維持） */
+    /* ブロック位置は中央のまま（左端に張り付かない） */
+    max-width: 26em !important;
+    margin: 0 auto 40px !important;
   }
 }
-
