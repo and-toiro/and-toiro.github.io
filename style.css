@@ -819,3 +819,46 @@ footer {
     padding-right: 56px; /* ハンバーガー分の逃げ */
   }
 }
+
+/* =========================
+   スマホ：スクロール後にロゴを出す（案③）
+   ========================= */
+@media screen and (max-width: 640px) {
+  /* まずは背景ロゴを消す（初期表示は文字を最優先） */
+  .hero {
+    background-image: none !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ロゴを疑似要素として用意（初期は透明） */
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("IMG_6499.JPG");
+    background-size: contain;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+    opacity: 0;                 /* ← 初期は見せない */
+    transition: opacity 0.6s ease;
+    z-index: 0;                 /* 背面 */
+    pointer-events: none;
+  }
+
+  /* スクロール後にクラスが付いたらロゴを表示 */
+  .hero.show-logo::after {
+    opacity: 1;
+  }
+
+  /* 既存の白オーバーレイはロゴより上・テキストより下に */
+  .hero::before {
+    z-index: 1;
+  }
+
+  /* テキストは最前面 */
+  .hero-inner,
+  .hero-main {
+    z-index: 2;
+  }
+}
