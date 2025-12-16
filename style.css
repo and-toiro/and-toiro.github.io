@@ -929,7 +929,7 @@ footer {
 }
 
 /* =========================
-   SP：サブタイトルは「位置そのまま」で文章だけ左揃え
+   SP：サブタイトルは「位置そのまま」で文章だけ左揃え（確実版）
    対象：concept / gallery / reserve
    ========================= */
 @media screen and (max-width: 640px) {
@@ -937,9 +937,10 @@ footer {
   .page-gallery .section-subtitle,
   .page-reserve .section-subtitle {
     text-align: left;
-    width: fit-content;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+
+    /* ブロック自体は中央に置く（fit-content を使わない） */
+    max-width: 26em;          /* ← 見た目の“位置”を中央に保つための幅上限 */
+    margin: 0 auto 40px;      /* ← 中央寄せ＋下余白（元の40pxを維持） */
   }
 }
+
