@@ -907,3 +907,39 @@ footer {
     background: rgba(255, 255, 255, 0.55);
   }
 }
+
+/* =========================
+   改行制御（PC / SP）
+   ========================= */
+.br-sp {
+  display: none;
+}
+
+.br-pc {
+  display: inline;
+}
+
+@media screen and (max-width: 640px) {
+  .br-sp {
+    display: inline;
+  }
+  .br-pc {
+    display: none;
+  }
+}
+
+/* =========================
+   SP：サブタイトルは「位置そのまま」で文章だけ左揃え
+   対象：concept / gallery / reserve
+   ========================= */
+@media screen and (max-width: 640px) {
+  .page-concept .section-subtitle,
+  .page-gallery .section-subtitle,
+  .page-reserve .section-subtitle {
+    text-align: left;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
