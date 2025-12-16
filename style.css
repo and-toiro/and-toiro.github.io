@@ -923,3 +923,15 @@ footer {
   .br-sp {
     display: inline;
   }
+
+/* =========================
+   SP：サブタイトルを左揃え（位置・余白はそのまま）
+   対象：concept / gallery / reserve
+   ========================= */
+@media screen and (max-width: 640px) {
+  .page-concept .section-subtitle,
+  .page-gallery .section-subtitle,
+  .page-reserve .section-subtitle {
+    text-align: left;
+  }
+}
