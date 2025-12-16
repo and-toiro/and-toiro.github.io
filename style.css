@@ -710,26 +710,6 @@ footer {
 }
 
 /* =========================
-   改行制御（PC / SP）
-   ========================= */
-.br-sp {
-  display: none;
-}
-
-.br-pc {
-  display: inline;
-}
-
-@media screen and (max-width: 640px) {
-  .br-sp {
-    display: inline;
-  }
-  .br-pc {
-    display: none;
-  }
-}
-
-/* =========================
    SP統合（max-width: 640px）
    ※スマホ用はここに集約
    ========================= */
