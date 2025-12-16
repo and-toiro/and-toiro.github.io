@@ -621,21 +621,6 @@ footer {
   image-rendering: auto !important;
 }
 
-/* スマホ専用：背景ロゴの見せ方を最適化（縦長画面でのカットを防ぐ） */
-@media screen and (max-width: 640px) {
-  .hero {
-    background-position: center 35% !important; 
-    padding-top: 80px;       /* テキストが上に乗りすぎないよう調整 */
-    padding-bottom: 80px;
-    min-height: 100vh;
-  }
-
-  .hero-inner {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
 /* TOPページだけフッターの余白を消す */
 .page-top footer {
   margin-top: 0 !important;
