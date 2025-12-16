@@ -709,81 +709,6 @@ footer {
   border-radius: 2px;
 }
 
-/* =========================
-   スマホ：スクロール後にロゴを出す（案③）
-   ========================= */
-@media screen and (max-width: 640px) {
-  /* まずは背景ロゴを消す（初期表示は文字を最優先） */
-  .hero {
-    background-image: none !important;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* ロゴを疑似要素として用意（初期は透明） */
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("IMG_6499.JPG");
-    background-size: contain;
-    background-position: center 35%;
-    background-repeat: no-repeat;
-    opacity: 0;                 /* ← 初期は見せない */
-    transition: opacity 0.6s ease;
-    z-index: 0;                 /* 背面 */
-    pointer-events: none;
-  }
-
-  /* スクロール後にクラスが付いたらロゴを表示 */
-  .hero.show-logo::after {
-    opacity: 1;
-  }
-
-  /* 既存の白オーバーレイはロゴより上・テキストより下に */
-  .hero::before {
-    z-index: 1;
-  }
-
-  /* テキストは最前面 */
-  .hero-inner,
-  .hero-main {
-    z-index: 2;
-  }
-}
-
-/* =========================
-   スマホ：ロゴ表示をやさしく調整（最終仕上げ）
-   ========================= */
-@media screen and (max-width: 640px) {
-
-  /* ロゴを少しだけ小さく・下寄せ */
-  .hero::after {
-    background-size: 85%;     /* 主張を抑える */
-    background-position: center 45%;
-  }
-
-  /* ロゴが出た後も文字を最優先に */
-  .hero.show-logo::after {
-    opacity: 0.65;            /* 完全表示しないのがポイント */
-  }
-}
-
-/* =========================
-   スマホ：ロゴをさらに淡くする
-   ========================= */
-@media screen and (max-width: 640px) {
-
-  /* ロゴの存在感を一段落とす */
-  .hero.show-logo::after {
-    opacity: 0.3; /* ← 0.35〜0.5 で好み調整可 */
-  }
-
-  /* 白オーバーレイを少し強めて色味を抑える */
-  .hero::before {
-    background: rgba(255, 255, 255, 0.55);
-  }
-
   /* =========================
      スマホ：ヒーロー見出しを小さくして改行を収める
      ========================= */
@@ -811,36 +736,6 @@ footer {
   }
   .br-pc {
     display: none;
-  }
-}
-
-/* =========================
-   SP：サブタイトルは「位置そのまま」で文章だけ左揃え（確実版）
-   対象：concept / gallery / reserve
-   ========================= */
-@media screen and (max-width: 640px) {
-  /* 赤枠の文章：左揃えのまま「ブロックだけ中央」に統一 */
-  .page-concept .section-subtitle,
-  .page-gallery .section-subtitle,
-  .page-reserve .section-subtitle,
-  .page-reserve .reserve-note {
-    text-align: left;
-    max-width: 720px;   /* .concept-content / .reserve-embed と揃える */
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* subtitle の下余白は subtitle 側だけで統一（reserve-note は別管理） */
-  .page-concept .section-subtitle,
-  .page-gallery .section-subtitle,
-  .page-reserve .section-subtitle {
-    margin-bottom: 40px;
-  }
-
-  /* reserve-note は本文なので余白を少しだけ詰める（必要なら 16〜32で調整） */
-  .page-reserve .reserve-note {
-    margin-bottom: 24px;
   }
 }
 
