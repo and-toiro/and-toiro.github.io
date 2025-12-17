@@ -860,9 +860,8 @@ footer {
 
      /* ===== menu（スマホ）左右余白 ===== */
   .page-menu .menu-sections {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+  padding: 0 16px;
+}
 
 }
 
