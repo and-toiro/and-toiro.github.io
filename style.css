@@ -846,6 +846,17 @@ footer {
   .page-reserve .reserve-note {
     margin-bottom: 24px;
   }
+
+     /* ===== access の赤枠文章 ===== */
+  .page-access .section-subtitle,
+  .page-access .access-info,
+  .page-access .text-muted {
+    text-align: left;
+    max-width: 720px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* スマホ：メニュー開いた状態 */
