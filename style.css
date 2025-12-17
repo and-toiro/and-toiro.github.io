@@ -837,7 +837,7 @@ footer {
 /* ===== gallery：subtitle は左揃えのまま、ブロック位置だけ中央（スマホ） ===== */
   .page-gallery .section-subtitle {
     text-align: left;
-    max-width: 520px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
