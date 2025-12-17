@@ -838,20 +838,15 @@ footer {
   }
 
    /* ===== gallery：左揃えのまま中央に置く（スマホ） ===== */
-.page-gallery .section-title {
-  text-align: center; /* 念のため（元々 center） */
-}
-
-.page-gallery .section-subtitle {
+.page-concept .section-subtitle,
+.page-gallery .section-subtitle,
+.page-reserve .section-subtitle,
+.page-reserve .reserve-note {
+  text-align: left;
+  max-width: 720px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-}
-
-.page-gallery .section-subtitle {
-  display: inline-block; /* ブロック幅を内容に合わせる→中央に置ける */
-  text-align: left;      /* 文字は左揃えのまま */
-  width: auto;           /* 100% を打ち消す */
-  max-width: 100%;       /* 画面からはみ出さない */
 }
    
   .page-concept .section-subtitle,
