@@ -211,19 +211,6 @@ document.addEventListener("DOMContentLoaded", function () {
       toggle.setAttribute("aria-expanded", String(isOpen));
     });
   }
-
-  /* ===== スクロール後にロゴ表示（スマホTOP専用） ===== */
-  const hero = document.querySelector(".hero");
-
-  if (hero) {
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 80) {
-        hero.classList.add("show-logo");
-      } else {
-        hero.classList.remove("show-logo");
-      }
-    });
-  }
 });
 </script>
   </body>
