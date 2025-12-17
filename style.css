@@ -854,12 +854,12 @@ footer {
 
 /* ===== reserve：subtitle は左揃え、ブロック位置は中央（スマホ） ===== */
 .page-reserve .section-subtitle {
+  display: table;              /* ← shrink-wrap して中央寄せが安定 */
+  margin: 0 auto 40px;         /* ← 中央配置 + 下余白は元のまま */
   text-align: left;
   max-width: 360px;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
 }
+
 
   /* ===== ギャラリー（スマホ） ===== */
   .gallery-grid {
@@ -871,7 +871,6 @@ footer {
   .page-menu .menu-sections {
   padding: 0 16px;
 }
-
 }
 
 /* スマホ：メニュー開いた状態 */
