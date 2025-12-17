@@ -823,11 +823,11 @@ footer {
     display: none;
   }
 
-  /* ===== concept / gallery / reserve の赤枠文章 =====
-     「文章は左揃え」「ブロックは中央」
-  */
+ /* ===== SP：subtitleは「左揃え + 中央配置」 ===== */
+@media screen and (max-width: 640px) {
+
+  /* concept / reserve は「幅を持たせて中央」 */
   .page-concept .section-subtitle,
-  .page-gallery .section-subtitle,
   .page-reserve .section-subtitle,
   .page-reserve .reserve-note {
     text-align: left;
@@ -836,6 +836,27 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* gallery は「左揃えのまま、ブロック自体を中央」 */
+  .page-gallery .section-subtitle {
+    display: inline-block;
+    text-align: left;
+    max-width: 720px;
+    width: auto;               /* ← これが要点：100%を外す */
+  }
+
+  /* gallery の subtitle を中央に置くための土台 */
+  .page-gallery .container {
+    text-align: center;
+  }
+
+  /* 余白は既存ルールに合わせる */
+  .page-concept .section-subtitle,
+  .page-gallery .section-subtitle,
+  .page-reserve .section-subtitle {
+    margin-bottom: 40px;
+  }
+}
 
    /* ===== gallery：左揃えのまま中央に置く（スマホ） ===== */
 .page-concept .section-subtitle,
