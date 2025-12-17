@@ -852,14 +852,23 @@ footer {
   width: fit-content;
 }
 
-/* ===== reserve：subtitle は左揃え、ブロック位置は中央（スマホ） ===== */
-.page-reserve .section-subtitle {
-  display: table;              /* ← shrink-wrap して中央寄せが安定 */
-  margin: 0 auto 40px;         /* ← 中央配置 + 下余白は元のまま */
-  text-align: left;
-  max-width: 360px;
+/* ===== reserve：subtitle を確実に「中央配置 + 左揃え」（スマホ） ===== */
+.page-reserve .section > .container {
+  text-align: center; /* inline-block を中央へ寄せる土台 */
 }
 
+.page-reserve .section-subtitle {
+  display: inline-block; /* 中央寄せできる “中身幅” の箱にする */
+  text-align: left;      /* 文字は左揃え */
+  max-width: 360px;
+  margin: 0 0 40px;      /* 下余白は維持（中央寄せは親で行う） */
+}
+
+/* reserve-note 等が中央揃えに巻き込まれないように戻す */
+.page-reserve .reserve-note,
+.page-reserve .reserve-embed {
+  text-align: left;
+}
 
   /* ===== ギャラリー（スマホ） ===== */
   .gallery-grid {
