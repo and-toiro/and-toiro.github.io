@@ -837,6 +837,18 @@ footer {
     margin-right: auto;
   }
 
+   /* ===== gallery：左揃えのまま中央に置く（スマホ） ===== */
+.page-gallery .section .container {
+  text-align: center; /* subtitle を中央に置くための土台 */
+}
+
+.page-gallery .section-subtitle {
+  display: inline-block; /* ブロック幅を内容に合わせる→中央に置ける */
+  text-align: left;      /* 文字は左揃えのまま */
+  width: auto;           /* 100% を打ち消す */
+  max-width: 100%;       /* 画面からはみ出さない */
+}
+   
   .page-concept .section-subtitle,
   .page-gallery .section-subtitle,
   .page-reserve .section-subtitle {
