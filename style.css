@@ -854,3 +854,28 @@ footer {
     display: block;
   }
 }
+
+/* ===== concept / gallery / reserve の赤枠文章 =====
+   「文章は左揃え」「ブロックは中央」
+*/
+.page-concept .section-subtitle,
+.page-gallery .section-subtitle,
+.page-reserve .section-subtitle,
+.page-reserve .reserve-note {
+  text-align: left;
+  max-width: 720px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== access の赤枠文章（追加） ===== */
+.page-access .section-subtitle,
+.page-access .access-info,
+.page-access .text-muted {
+  text-align: left;
+  max-width: 720px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
