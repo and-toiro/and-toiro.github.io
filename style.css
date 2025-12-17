@@ -834,14 +834,15 @@ footer {
     margin-right: auto;
   }
 
-/* ===== gallery：subtitle は左揃えのまま、ブロック位置だけ中央（スマホ） ===== */
-  .page-gallery .section-subtitle {
-    text-align: left;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-  }
+/* ===== concept / gallery：subtitle は左揃え、ブロック位置は中央（スマホ） ===== */
+.page-concept .section-subtitle,
+.page-gallery .section-subtitle {
+  text-align: left;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
 
   /* ===== ギャラリー（スマホ） ===== */
   .gallery-grid {
