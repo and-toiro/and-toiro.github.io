@@ -838,8 +838,13 @@ footer {
   }
 
    /* ===== gallery：左揃えのまま中央に置く（スマホ） ===== */
-.page-gallery .section .container {
-  text-align: center; /* subtitle を中央に置くための土台 */
+.page-gallery .section-title {
+  text-align: center; /* 念のため（元々 center） */
+}
+
+.page-gallery .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page-gallery .section-subtitle {
