@@ -452,6 +452,13 @@ nav a.active::after {
   border: 1px solid #f3f4f6;
 }
 
+.gallery-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
 /* =========================
    アクセス
    ========================= */
