@@ -489,30 +489,128 @@ nav a.active::after {
 }
 
 /* =========================
-   予約ページ（Airリザーブ埋め込み想定）
+   予約ページ
    ========================= */
 
 .reserve-note {
   max-width: 720px;
-  margin: 0 auto 24px;
+  margin: 0 auto 40px;
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: left;
+}
+
+/* 電話予約・LINE予約の共通ボックス */
+.reserve-method {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  padding: 32px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.reserve-method-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+}
+
+.reserve-method-text {
+  margin: 0 0 20px;
   font-size: 14px;
   color: var(--text-muted);
 }
 
-.reserve-embed {
-  max-width: 720px;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #e5e7eb;
+.reserve-method-note {
+  margin: 20px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
 }
 
-/* Airリザーブ iframe を枠内で全幅表示 */
-.reserve-embed iframe {
-  width: 100%;
-  height: 820px;   /* まずはこの高さ。足りなければ後で増やす */
-  border: 0;
+/* 電話ボタン */
+.reserve-phone-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background-color: var(--main-color);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: opacity 0.2s ease;
+}
+
+.reserve-phone-button:hover {
+  opacity: 0.85;
+}
+
+/* LINEで送る内容 */
+.reserve-line-list {
+  display: inline-block;
+  margin: 0 auto 8px;
+  text-align: left;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.reserve-line-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+
+.reserve-line-list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+}
+
+/* LINEボタン */
+.reserve-line-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  margin-top: 24px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background-color: #06c755;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.reserve-line-button:hover {
+  opacity: 0.85;
+}
+
+/* LINE QRコード */
+.reserve-line-qr {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border-light);
+}
+
+.reserve-line-qr p {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.reserve-line-qr img {
   display: block;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 /* =========================
@@ -886,5 +984,49 @@ footer {
 @media screen and (max-width: 640px) {
   .site-nav.is-open {
     display: block;
+  }
+}
+
+/* =========================
+   予約ページ（スマホ）
+   ========================= */
+@media screen and (max-width: 640px) {
+  .page-reserve .reserve-note {
+    width: 100%;
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .page-reserve .reserve-method {
+    width: 100%;
+    padding: 28px 20px;
+    margin-bottom: 32px;
+  }
+
+  .page-reserve .reserve-method-title {
+    font-size: 18px;
+  }
+
+  .page-reserve .reserve-method-text,
+  .page-reserve .reserve-method-note {
+    text-align: left;
+  }
+
+  .page-reserve .reserve-phone-button,
+  .page-reserve .reserve-line-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .page-reserve .reserve-line-list {
+    display: block;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-reserve .reserve-line-qr img {
+    width: 200px;
+    height: 200px;
   }
 }
