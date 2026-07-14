@@ -963,8 +963,7 @@ footer {
 }
 
 /* reserve-note 等が中央揃えに巻き込まれないように戻す */
-.page-reserve .reserve-note,
-.page-reserve .reserve-embed {
+.page-reserve .reserve-note {
   text-align: left;
 }
 
